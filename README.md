@@ -1,1 +1,1 @@
-# python_training
+# Repa for python training Infopulse
