@@ -18,10 +18,10 @@ class AddNewContact(unittest.TestCase):
     def test_add_new_contact(self):
         wd = self.wd
         self.open_homepage(wd)
-        self.login(wd, "admin", "secret")
-        self.create_group(wd, "Alina", "Alina", "Alina", "Alina", "Alina", "Infopulse", "Polyova str 24D", "123", "123",
-                          "123", "123", "1234", "1234", "1234", "1234", "18", "September", "1996", "18", "August",
-                          "1996", "Alina", "1", "1", "1")
+        self.login(wd, username="admin", passwword="secret")
+        self.create_group(wd, firstName="Alina", middlename="Alina", lastname="Alina", nickname="Alina", title="Alina", company="Infopulse", address="Polyova str 24D", home="123", mobile="123",
+                          work="123", fax="123", email="1234", email2="1234", email3="1234", homepage="1234", bday="18", bmonth="September", byear="1996", aday="18", amonth="August",
+                          ayear="1996", new_group="Alina", address2="1", phone2="1", notes="1")
         self.go_to_contacts_page(wd)
         self.check_contacts_in_group(wd)
         self.logout(wd)
